@@ -59,14 +59,22 @@ public class Livre {
         Scanner lectureClavier = new Scanner(System.in);
         System.out.print("Entrez le titre : ");
         setTitre(lectureClavier.next());
-        System.out.print("Entrez la categorie : ");
+        System.out.print("Entrez la catégorie : ");
         setCategorie(lectureClavier.next());
         System.out.print("Entrez le nom de l'auteur : ");
         setNomAuteur(lectureClavier.next());
-        System.out.print("Entrez le prenom de l'auteur : ");
+        System.out.print("Entrez le prénom de l'auteur : ");
         setPrenomAuteur(lectureClavier.next());
-        System.out.print("Entrez le numero ISBN : ");
+        System.out.print("Entrez le numéro ISBN : ");
         setIsbn(lectureClavier.next());
+    }
+
+    public Livre(String t, String c, String na, String pa, String i) {
+        setTitre(t);
+        setCategorie(c);
+        setNomAuteur(na);
+        setPrenomAuteur(pa);
+        setIsbn(i);
     }
 
     private String setCode() {
