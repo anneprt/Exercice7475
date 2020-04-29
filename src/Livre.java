@@ -49,7 +49,7 @@ public class Livre {
     }
 
     public String getCode() {
-        //code=setCode();
+        code = setCode();
         return code;
     }
 
@@ -78,6 +78,20 @@ public class Livre {
 
         return debutNom + debutPrenom + debutCategorie + finIsbn;
 
+    }
+
+    private String setCode() {
+        String debutNom;
+        String debutPrenom;
+        String debutCategorie;
+        int longueurIsbn;
+        String finIsbn;
+        debutNom = nomAuteur.substring(0, 2);
+        debutPrenom = prenomAuteur.substring(0, 2);
+        debutCategorie = categorie.substring(0, 2);
+        longueurIsbn = isbn.length();
+        finIsbn = isbn.substring((longueurIsbn - 2), longueurIsbn);
+        return debutNom + debutPrenom + debutCategorie + finIsbn;
     }
 }
 
