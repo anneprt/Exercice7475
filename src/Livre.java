@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Livre {
 
 
@@ -53,31 +55,18 @@ public class Livre {
         return code;
     }
 
-    public void afficherUnLivre() {
-        System.out.println("Titre : " + titre);
-        System.out.println("Auteur : " + nomAuteur + " " + prenomAuteur);
-        System.out.println("Catégorie : " + categorie);
-        System.out.println("ISBN : " + isbn);
-    }
-
-    public String calculerLeCode() {
-        String debutNom;
-        String debutPrenom;
-        String debutCategorie;
-        int longueurIsbn;
-        String finIsbn;
-
-        debutNom = nomAuteur.substring(0, 2);
-        debutPrenom = prenomAuteur.substring(0, 2);
-
-        debutCategorie = categorie.substring(0, 2);
-
-        longueurIsbn = isbn.length();
-
-        finIsbn = isbn.substring((longueurIsbn - 2), longueurIsbn);
-
-        return debutNom + debutPrenom + debutCategorie + finIsbn;
-
+    public Livre() {
+        Scanner lectureClavier = new Scanner(System.in);
+        System.out.print("Entrez le titre : ");
+        setTitre(lectureClavier.next());
+        System.out.print("Entrez la categorie : ");
+        setCategorie(lectureClavier.next());
+        System.out.print("Entrez le nom de l'auteur : ");
+        setNomAuteur(lectureClavier.next());
+        System.out.print("Entrez le prenom de l'auteur : ");
+        setPrenomAuteur(lectureClavier.next());
+        System.out.print("Entrez le numero ISBN : ");
+        setIsbn(lectureClavier.next());
     }
 
     private String setCode() {
@@ -92,6 +81,14 @@ public class Livre {
         longueurIsbn = isbn.length();
         finIsbn = isbn.substring((longueurIsbn - 2), longueurIsbn);
         return debutNom + debutPrenom + debutCategorie + finIsbn;
+    }
+
+    public void afficherUnLivre() {
+        System.out.println("Titre : " + titre);
+        System.out.println("Auteur : " + nomAuteur + " " + prenomAuteur);
+        System.out.println("Catégorie : " + categorie);
+        System.out.println("ISBN : " + isbn);
+        System.out.println("Code : " + getCode());
     }
 }
 
