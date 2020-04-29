@@ -1,12 +1,33 @@
 public class Livre {
 
 
-    String titre;
-    String categorie;
-    String isbn;
-    String nomAuteur;
-    String prenomAuteur;
-    String code;
+    private String titre;
+    private String categorie;
+    private String isbn;
+    private String nomAuteur;
+    private String prenomAuteur;
+    private String code;
+
+    public void setTitre(String valeur) {
+        titre = valeur;
+    }
+
+    public void setCategorie(String valeur) {
+        categorie = valeur;
+    }
+
+    public void setIsbn(String valeur) {
+        isbn = valeur;
+    }
+
+    public void setNomAuteur(String valeur) {
+        nomAuteur = valeur;
+    }
+
+    public void setPrenomAuteur(String valeur) {
+        prenomAuteur = valeur;
+    }
+
 
     public void afficherUnLivre() {
         System.out.println("Titre : " + titre);

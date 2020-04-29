@@ -7,19 +7,19 @@ public class Bibliotheque {
         Livre livrePoche = new Livre();
 
         System.out.print("Entrez le titre : ");
-        livrePoche.titre = lectureClavier.next();
+        livrePoche.setTitre(lectureClavier.next());
 
         System.out.print("Entrez la categorie : ");
-        livrePoche.categorie = lectureClavier.next();
+        livrePoche.setCategorie(lectureClavier.next());
 
         System.out.print("Entrez le nom de l'auteur : ");
-        livrePoche.nomAuteur = lectureClavier.next();
+        livrePoche.setNomAuteur(lectureClavier.next());
 
         System.out.print("Entrez le prenom de l'auteur : ");
-        livrePoche.prenomAuteur = lectureClavier.next();
+        livrePoche.setPrenomAuteur(lectureClavier.next());
 
         System.out.print("Entrez le numero ISBN : ");
-        livrePoche.isbn = lectureClavier.next();
+        livrePoche.setIsbn(lectureClavier.next());
 
         livrePoche.afficherUnLivre();
 
