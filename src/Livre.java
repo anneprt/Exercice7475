@@ -28,6 +28,30 @@ public class Livre {
         prenomAuteur = valeur;
     }
 
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public String getNomAuteur() {
+        return nomAuteur;
+    }
+
+    public String getPrenomAuteur() {
+        return prenomAuteur;
+    }
+
+    public String getCode() {
+        //code=setCode();
+        return code;
+    }
 
     public void afficherUnLivre() {
         System.out.println("Titre : " + titre);

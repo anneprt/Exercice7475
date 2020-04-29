@@ -23,6 +23,6 @@ public class Bibliotheque {
 
         livrePoche.afficherUnLivre();
 
-        System.out.println("code du livre : " + livrePoche.calculerLeCode());
+        System.out.println("code du livre : " + livrePoche.getTitre() + livrePoche.getCode());
     }
 }
